@@ -38,14 +38,13 @@ class Pop extends Activity implements AdapterView.OnItemClickListener {
 
         getWindow().setLayout((int)(width*.8), (int) (height*.8));
 
-
-
-
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         TextView tv = (TextView) view;
         Toast.makeText(this, "you clicked on " + tv.getText() + " " + position, Toast.LENGTH_SHORT).show();
+
+        // make the city name to appear in the mainActivity
     }
 }

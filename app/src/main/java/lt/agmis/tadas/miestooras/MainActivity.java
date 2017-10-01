@@ -33,8 +33,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        populateListView();
-
         getJSON("Kaunas", 1);
         getJSON("Vilnius", 2);
         getJSON("Klaipėda", 3);
@@ -62,15 +60,6 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void populateListView() {
-        // create list of items
-        String[] cityItems = {"Kaunas", "Vilnius", "Klaipėda", "Alytus"};
-
-//        ArrayAdapter<String> = new ArrayAdapter<String>(
-//                this,               // context for activity
-//                R.layout.da_item,   // Layout to use (create)
-//                cityItems);         // Items to be displayed
-    }
 
     public void getJSON(final String city, final int textViewNr ){
 
