@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONObject;
@@ -26,17 +27,22 @@ import java.net.URL;
 
 public class MainActivity extends Activity {
 
+    String[] cities = {"Kaunas", "Vilnius", "Klaipėda"};
+
     JSONObject data = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        getJSON("Kaunas", 1);
-        getJSON("Vilnius", 2);
-        getJSON("Klaipėda", 3);
-        getJSON("Alytus", 4);
+
+        for(int i = 0; i < cities.length; i++){
+            getJSON(cities[i], i+1);
+        }
+
+//        getJSON("Kaunas", 1);
+//        getJSON("Vilnius", 2);
+//        getJSON("Klaipėda", 3);
 
         Button addCityBtn = (Button) findViewById(R.id.addCityBtn);
         addCityBtn.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +101,14 @@ public class MainActivity extends Activity {
                     Log.d(city + " temp ", String.valueOf(tempCelcius));
 
                     TextView textView = null;
+
+//                    LinearLayout myLayout = (LinearLayout) findViewById(R.id.mainLinearLayout);
+//                    textView = new TextView(getApplicationContext());
+//                    textView.setText(city);
+//                    textView.setId(textViewNr);
+//
+//                    myLayout.addView(textView);
+
                     switch(textViewNr){
                         case 1:
                             textView = (TextView) findViewById(R.id.textView1);
