@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lt.agmis.tadas.miestooras.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"
+        android:id="@+id/include" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <LinearLayout
+        android:layout_width="1188dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="100dp"
+        android:layout_marginEnd="150dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="60dp">
+
+        <Button
+            android:id="@+id/showTempBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|fill"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="Rodyti temperatūrą"
+            app:layout_anchor="@+id/include"
+            app:layout_anchorGravity="top|center_horizontal" />
+
+
+        <Button
+            android:id="@+id/addCityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|fill"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="Pridėti miestą"
+            app:layout_anchor="@+id/include"
+            app:layout_anchorGravity="top|center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:text="miestas"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:text="miestas"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:text="miestas"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:text="miestas"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
